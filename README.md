@@ -56,7 +56,7 @@ Now the code above will explained step by step to understand the details.
 
 1. Implements the interface Calculation. The method calculate() will contain the actual code for the transformation.
 2. The input and output value need to be annotation.
-    - @Input: It's can be FEWS TimeSeries or const factor.
+    - @Input: It's can be FEWS TimeSeries or const option.
     - @Output: The output FEWS TimeSeries.
 3. @Input is important to note that input timeseries can be defined type as a:
     - Variable
@@ -72,6 +72,12 @@ Now the code above will explained step by step to understand the details.
     - For example by configuration a locationSet in the timeSeriesSet, when the timeseriesSet only defines a single timeseries than a Variable is used.
 7. If use Variable, calculate() method must be executed **timestep number** times. 
 8. If use TimeSeriesArray, calculate() method must be executed **one** times. 
+9. The const option be of type:
+- string
+- int
+- float
+- boolean
+10. The fieldName and option key **should be same name** is looked up in the **java-class** and in the **xml-config**.
 
 ## PI-OpenAPI Import Module
 
