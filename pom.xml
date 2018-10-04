@@ -65,12 +65,6 @@
 				<artifactId>commons-utils</artifactId>
 				<version>${commons.utils.version}</version>
 				<scope>provided</scope>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
