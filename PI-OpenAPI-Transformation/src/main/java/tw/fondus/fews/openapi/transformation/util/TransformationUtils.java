@@ -15,7 +15,7 @@ import nl.wldelft.util.timeseries.TimeSeriesArray;
  */
 public class TransformationUtils {
 	private static final Logger log = LoggerFactory.getLogger( TransformationUtils.class );
-	public static final int THRESHOLD_LOW = 10;
+	public static final int THRESHOLD_LOW = 30;
 	
 	/**
 	 * Filter the noise.
@@ -50,11 +50,11 @@ public class TransformationUtils {
 					now = next;
 				} else if ( nextIndex == i && perious < THRESHOLD_LOW ){
 					now = perious;
-				} else if ( perious < THRESHOLD_LOW && next < THRESHOLD_LOW ){
+				} else if ( (perious < THRESHOLD_LOW && next < THRESHOLD_LOW) || (now - perious) > THRESHOLD_LOW && (now - next) > THRESHOLD_LOW ){
 					now = ( perious + next ) / 2;
 					
 					log.info( "Input value: {} execeed Noise: {}, so programs fill value with Linear Interpolation.", now, noise );
-				}
+				} 
 			}
 			
 			output.setValue( i, now);
