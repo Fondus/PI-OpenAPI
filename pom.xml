@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tw.fondus.fews.openapi</groupId>
@@ -29,7 +31,7 @@
 	</developers>
 
 	<properties>
-		<api.version>0.1.0</api.version>
+		<api.version>1.0.0</api.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,8 +43,8 @@
 		<fews.version>2017.01</fews.version>
 		<xerces.version>2.11.0</xerces.version>
 		<junit.version>4.12</junit.version>
-		<commons.version>0.8.0</commons.version>
-		<commons.utils.version>0.7.2</commons.utils.version>
+		<commons.version>0.9.0</commons.version>
+		<commons.utils.version>0.8.5</commons.utils.version>
 	</properties>
 
 	<dependencyManagement>
@@ -57,6 +59,12 @@
 			<dependency>
 				<groupId>tw.fondus.commons</groupId>
 				<artifactId>commons-fews</artifactId>
+				<version>${commons.version}</version>
+			</dependency>
+			<!-- Commons-Web -->
+			<dependency>
+				<groupId>tw.fondus.commons</groupId>
+				<artifactId>commons-web</artifactId>
 				<version>${commons.version}</version>
 			</dependency>
 			<!-- Commons-Utils -->
@@ -111,37 +119,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- Delft-FEWS -->
+		<!-- Delft-FEWS Starter -->
 		<dependency>
 			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-openapi</artifactId>
+			<artifactId>delft-fews-starter-commons</artifactId>
 			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-pi</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-pi-castor</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-util</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>castor</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<!-- Xerces Impl -->
-		<dependency>
-			<groupId>xerces</groupId>
-			<artifactId>xercesImpl</artifactId>
-			<version>${xerces.version}</version>
 		</dependency>
 		<!-- Junit -->
 		<dependency>
@@ -200,8 +182,9 @@
 		<system>GitHub Issues</system>
 		<url>https://github.com/Fondus/</url>
 	</issueManagement>
-	
+
 	<modules>
 		<module>PI-OpenAPI-Transformation</module>
+		<module>PI-OpenAPI-Importer</module>
 	</modules>
 </project>
