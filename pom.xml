@@ -29,6 +29,13 @@
 			<email>vipcube@gmail.com</email>
 		</developer>
 	</developers>
+	
+	<scm>
+		<url>https://github.com/Fondus/PI-OpenAPI</url>
+		<connection>scm:git:https://github.com/Fondus/PI-OpenAPI.git</connection>
+		<developerConnection>scm:git:https://github.com/Fondus/PI-OpenAPI.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<api.version>1.0.0</api.version>
