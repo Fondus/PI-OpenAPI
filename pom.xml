@@ -6,7 +6,7 @@
 
 	<groupId>tw.fondus.fews.openapi</groupId>
 	<artifactId>pi-openapi</artifactId>
-	<version>{api.version}</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
 	<name>The FEWS Published Interface Open API</name>
@@ -46,33 +46,28 @@
 		<jodatime.version>2.9.9</jodatime.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
-		<guava.version>23.4-jre</guava.version>
 		<fews.version>2017.01</fews.version>
 		<xerces.version>2.11.0</xerces.version>
 		<junit.version>4.12</junit.version>
-		<commons.version>0.9.0</commons.version>
+		<commons.version>1.0.2</commons.version>
 		<commons.utils.version>0.8.5</commons.utils.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Google Guava -->
-			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<version>${guava.version}</version>
-			</dependency>
 			<!-- Commons-FEWS -->
 			<dependency>
 				<groupId>tw.fondus.commons</groupId>
 				<artifactId>commons-fews</artifactId>
 				<version>${commons.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Commons-Web -->
 			<dependency>
 				<groupId>tw.fondus.commons</groupId>
 				<artifactId>commons-web</artifactId>
 				<version>${commons.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Commons-Utils -->
 			<dependency>
@@ -237,6 +232,5 @@
 
 	<modules>
 		<module>PI-OpenAPI-Transformation</module>
-		<module>PI-OpenAPI-Importer</module>
 	</modules>
 </project>
