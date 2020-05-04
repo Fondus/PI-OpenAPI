@@ -7,9 +7,17 @@ It's possible to write custom plugins above a below.
 - Export module.
 - Transformations module.
 
+## PI-OpenAPI Export Module
+
+The FondUS Java implements of the custom exports modules.
+
+It's support the export type is show as below:
+
+- PiJSON TimeSeries (Non-ensemble)
+
 ## PI-OpenAPI Transformations Module
 
-The FondUS Java implements of the custome transformations modules.
+The FondUS Java implements of the custom transformations modules.
 Adding a custom transformation involves several steps which will be explained in detail in the upcoming section:
 
 1. writing the code for the custom transformation.

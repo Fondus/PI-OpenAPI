@@ -13,6 +13,7 @@
 	<packaging>jar</packaging>
 
 	<name>The FEWS Published Interface Open API Export Plugins</name>
+	<url>https://publicwiki.deltares.nl/display/FEWSDOC/Custom+time+series+import+formats+using+java</url>
 
 	<description>
 		The FondUS Java implements of the custom exports modules.
