@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.8">
+    <timeZone>0.0</timeZone>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>6ea33980-e3b2-4cbc-b427-f4b210c76dbb</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水五</stationName>
+            <lat>23.72397160117301</lat>
+            <lon>120.32998369439595</lon>
+            <x>181685.7994</x>
+            <y>2624615.026</y>
+            <z>7.464</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="7.776" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="7.714" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="7.665" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="7.631" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>7aa619ff-618c-4a81-9df7-17f59674ee03</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水二</stationName>
+            <lat>23.735206756021928</lat>
+            <lon>120.21671208536861</lon>
+            <x>170143.12939999998</x>
+            <y>2625918.2579999994</y>
+            <z>-1.114</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="0.542" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="0.553" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="0.562" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="0.567" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>448bb7b9-bcf9-47f4-9594-882e6a2c4e05</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水一</stationName>
+            <lat>23.738321016740002</lat>
+            <lon>120.19286578649228</lon>
+            <x>167713.827</x>
+            <y>2626276.748</y>
+            <z>-2.936</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="-2.343" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="-2.339" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="-2.337" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="-2.335" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>5d28e3de-0097-4579-9c7a-9b55c1251dfa</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水七</stationName>
+            <lat>23.718806845492562</lat>
+            <lon>120.40457397308863</lon>
+            <x>189288.7573</x>
+            <y>2624009.2520000003</y>
+            <z>17.693</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="17.727" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="17.719" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="17.731" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="17.756" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>0b72b81a-5c40-4e1c-a49f-5b12b3f9787e</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水三</stationName>
+            <lat>23.729487442083112</lat>
+            <lon>120.24820678610654</lon>
+            <x>173350.82389999996</x>
+            <y>2625267.5300000003</y>
+            <z>0.839</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="0.938" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="0.935" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="0.926" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="0.921" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>d8722075-f9b3-455b-afd9-df8fe3d5deb1</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水四</stationName>
+            <lat>23.72374415357061</lat>
+            <lon>120.30855114398304</lon>
+            <x>179500.36429999996</x>
+            <y>2624600.2830000003</y>
+            <z>5.321</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="5.539" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="5.534" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="5.496" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="5.462" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>cef17b49-a53f-4d62-aca8-638da70d90d8</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>有才寮排水六</stationName>
+            <lat>23.71788957438166</lat>
+            <lon>120.35984789086845</lon>
+            <x>184727.78409999996</x>
+            <y>2623927.447</y>
+            <z>10.716</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="11.621" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="11.615" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="11.611" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="11.609" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>1e862d92-1c04-4eef-ac9a-110d1cad401f</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>舊頂埤頭大排一</stationName>
+            <lat>23.777288807708125</lat>
+            <lon>120.45310178560753</lon>
+            <x>194261.7879</x>
+            <y>2630466.1089999997</y>
+            <z>23.93</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="24.048" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="24.03" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="24.017" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="24.007" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>64896241-dcec-440a-ae8d-481fd1e5993b</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>自強大橋</stationName>
+            <lat>23.829082282550072</lat>
+            <lon>120.40038356851117</lon>
+            <x>188913.0077</x>
+            <y>2636223.8299999996</y>
+            <z>11.223</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="11.359" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="11.345" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="11.335" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="11.345" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>12b60b67-ff03-4d05-9c08-b9d5e7aa3880</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>八角亭排水二</stationName>
+            <lat>23.779167699918464</lat>
+            <lon>120.3650236344323</lon>
+            <x>185285.8265</x>
+            <y>2630711.5239999997</y>
+            <z>10.954</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="11.664" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="11.56" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="11.455" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="11.377" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>a12ff595-fae8-4353-8bc6-1ed763b3d3bd</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>八角亭排水一</stationName>
+            <lat>23.79950820072514</lat>
+            <lon>120.34433937130557</lon>
+            <x>183188.10900000003</x>
+            <y>2632973.789</y>
+            <z>7.25</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="7.732" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="7.889" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="7.795" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="7.732" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>112ce36b-9f9d-430d-b636-f1793dfc8b13</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪六</stationName>
+            <lat>23.743573994056437</lat>
+            <lon>120.42213780635511</lon>
+            <x>191090.78860000003</x>
+            <y>2626744.7660000003</y>
+            <z>19.764</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="20.181" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="20.107" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="20.041" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="19.984" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>cc69d1e5-83da-4ec0-bde1-17738fc4512c</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪四</stationName>
+            <lat>23.744574873826277</lat>
+            <lon>120.37092172519013</lon>
+            <x>185870.0025</x>
+            <y>2626877.755</y>
+            <z>10.782</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="11.882" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="11.882" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="11.882" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="11.882" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>78139e43-a5e9-4c74-b802-cd649a3d4420</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪二</stationName>
+            <lat>23.740745501223177</lat>
+            <lon>120.2455454264535</lon>
+            <x>173086.0827</x>
+            <y>2626515.794</y>
+            <z>-0.61</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="0.605" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="0.558" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="0.524" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="0.55" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>d6426170-e686-43de-a21a-33be3d87dc58</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪五</stationName>
+            <lat>23.74637795324504</lat>
+            <lon>120.40985642686981</lon>
+            <x>189840.0417</x>
+            <y>2627060.4359999998</y>
+            <z>19.475</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="19.918" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="19.936" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="19.903" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="19.849" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>4b2f4aad-6027-45fd-a07e-8babbbc07177</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪七</stationName>
+            <lat>23.751522335487962</lat>
+            <lon>120.50802862518975</lon>
+            <x>199849.99000000002</x>
+            <y>2627592.0990000004</y>
+            <z>33.082</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="33.246" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="33.216" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="33.197" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="33.183" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>ddb708d9-5c89-4143-9e2d-5a526ae2f6ef</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪三</stationName>
+            <lat>23.741997464553613</lat>
+            <lon>120.34739603637237</lon>
+            <x>183470.3496</x>
+            <y>2626603.113</y>
+            <z>5.728</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="5.846" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="5.836" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="5.828" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="5.821" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>f609e182-b340-4c83-94e0-d0d0e74c8889</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>新虎尾溪一</stationName>
+            <lat>23.7620455087601</lat>
+            <lon>120.2237028790035</lon>
+            <x>170872.09649999999</x>
+            <y>2628886.757</y>
+            <z>-1.13</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="0.562" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="0.592" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="0.575" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="0.554" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>a4c54db4-6c47-4561-a70e-0649ca21577c</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>大義崙排水二</stationName>
+            <lat>23.780607242855204</lat>
+            <lon>120.41760694909985</lon>
+            <x>190645.6857</x>
+            <y>2630847.993</y>
+            <z>19.83</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="20.056" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="20.012" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="19.979" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="19.954" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>d0ea042e-d219-4080-a6fe-c9f02bcc2bc5</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>大義崙排水一</stationName>
+            <lat>23.798071420607375</lat>
+            <lon>120.39195477480096</lon>
+            <x>188039.57100000003</x>
+            <y>2632793.074</y>
+            <z>15.014</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="15.262" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="15.223" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="15.189" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="15.165" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>c14bebbe-1bbe-4f66-b884-c0c3718fe5a5</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>彰雲橋</stationName>
+            <lat>23.784162942365082</lat>
+            <lon>120.63581673892783</lon>
+            <x>212885.7078</x>
+            <y>2631167.6929999995</y>
+            <z>88.705</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="89.585" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="89.582" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="89.582" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="89.582" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>63dd5704-ff2f-4e68-a7f7-1ee73887c4b2</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>清水溪橋</stationName>
+            <lat>23.599567820679184</lat>
+            <lon>120.65647702663793</lon>
+            <x>214941.9865</x>
+            <y>2610719.6329999994</y>
+            <z>278.09</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="278.446" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="278.362" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="278.306" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="278.268" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>2728a4c4-b1ec-492f-960c-6fd45d34f9ef</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>溪州大橋</stationName>
+            <lat>23.8123371244834</lat>
+            <lon>120.47000118920005</lon>
+            <x>195998.64460000003</x>
+            <y>2634341.093</y>
+            <z>20.038</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="20.064" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="20.058" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="20.053" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="20.048" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>123da78b-97cc-450c-bcae-704edc572490</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>施厝寮排水三</stationName>
+            <lat>23.780829255202573</lat>
+            <lon>120.30845983100366</lon>
+            <x>179521.79</x>
+            <y>2630922.4499999997</y>
+            <z>3.956</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="4.205" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="4.192" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="4.183" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="4.178" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>a11ee97c-6d25-432b-b8c0-5d7a7e8ecb59</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>施厝寮排水五</stationName>
+            <lat>23.774317807147614</lat>
+            <lon>120.35187934344067</lon>
+            <x>183943.7264</x>
+            <y>2630180.453</y>
+            <z>11.498</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="11.54" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="11.534" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="11.666" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="11.662" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>12bd04cf-59d5-4ade-8e51-dfc00bdc1cd7</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>施厝寮排水二</stationName>
+            <lat>23.78263222643466</lat>
+            <lon>120.26841128311703</lon>
+            <x>175441.13</x>
+            <y>2631142.571</y>
+            <z>0.76</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="0.864" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="0.844" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="0.822" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="0.807" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>1dba28bd-8cbb-4080-a03a-1800fe57608c</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>施厝寮排水一</stationName>
+            <lat>23.7867580163323</lat>
+            <lon>120.24642644137604</lon>
+            <x>173202.9121</x>
+            <y>2631611.216</y>
+            <z>-2.88</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="0.416" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="0.578" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="0.631" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="0.584" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>7b175c5a-e7ec-41f9-a1b1-1ac81d7df6eb</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>西濱大橋</stationName>
+            <lat>23.823725898999196</lat>
+            <lon>120.2879219983152</lon>
+            <x>177452.43789999996</x>
+            <y>2635683.597</y>
+            <z>3.902</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="4.064" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="4.068" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="4.079" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="4.083" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>d79ff8f3-7e09-432b-a2a6-096cdb4ae241</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水五</stationName>
+            <lat>23.697025539474033</lat>
+            <lon>120.29015922044695</lon>
+            <x>177610.3301</x>
+            <y>2621650.4560000002</y>
+            <z>4.452</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="5.151" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="5.143" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="5.139" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="5.136" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>a2fdcd8b-b279-456f-9af9-7203182a8759</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水七</stationName>
+            <lat>23.703151306932437</lat>
+            <lon>120.34056584774218</lon>
+            <x>182754.10480000003</x>
+            <y>2622304.183</y>
+            <z>9.827</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="9.848" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="9.84" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="9.835" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="9.828" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>3ec85bba-6260-4254-a588-bcdf6b59fc58</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水一</stationName>
+            <lat>23.698488784591653</lat>
+            <lon>120.18879993836308</lon>
+            <x>167274.176</x>
+            <y>2621867.659</y>
+            <z>-1.667</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="2.439" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="2.384" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="2.436" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="2.427" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>aaf559dc-4e8c-412b-a35c-6c73c4791757</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水三</stationName>
+            <lat>23.68848968872878</lat>
+            <lon>120.23929188837734</lon>
+            <x>172417.62729999996</x>
+            <y>2620731.8729999997</y>
+            <z>0.867</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="2.514" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="2.398" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="2.422" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="2.425" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>8e4921d3-f974-400f-bf20-44fda399cfac</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水二</stationName>
+            <lat>23.683386143495092</lat>
+            <lon>120.21948296742676</lon>
+            <x>170394.1965</x>
+            <y>2620177.575</y>
+            <z>-0.019</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="2.332" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="2.481" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="2.41" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="2.413" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>8b87adbb-ef4d-48c0-87ed-74355fc2ee1c</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水四</stationName>
+            <lat>23.695075980350172</lat>
+            <lon>120.2749440928385</lon>
+            <x>176057.5351</x>
+            <y>2621442.354</y>
+            <z>3.127</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="3.57" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="3.554" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="3.545" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="3.541" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>62809ddf-5e5d-46f2-9259-10ff725c78bf</locationId>
+            <parameterId>H.simulated</parameterId>
+            <qualifierId>Forecast</qualifierId>
+            <timeStep unit="second" multiplier="3600"/>
+            <startDate date="2018-08-24" time="16:00:00"/>
+            <endDate date="2018-08-24" time="19:00:00"/>
+            <forecastDate date="2018-08-24" time="16:00:00"/>
+            <missVal>-999.0</missVal>
+            <stationName>馬公厝排水六</stationName>
+            <lat>23.70852839423451</lat>
+            <lon>120.32072195399391</lon>
+            <x>180733.2957</x>
+            <y>2622909.19</y>
+            <z>7.936</z>
+            <units>m</units>
+            <creationDate>2020-05-01</creationDate>
+            <creationTime>17:07:04</creationTime>
+        </header>
+        <event date="2018-08-24" time="16:00:00" value="8.091" flag="0"/>
+        <event date="2018-08-24" time="17:00:00" value="8.06" flag="0"/>
+        <event date="2018-08-24" time="18:00:00" value="8.04" flag="0"/>
+        <event date="2018-08-24" time="19:00:00" value="8.038" flag="0"/>
+    </series>
+</TimeSeries>

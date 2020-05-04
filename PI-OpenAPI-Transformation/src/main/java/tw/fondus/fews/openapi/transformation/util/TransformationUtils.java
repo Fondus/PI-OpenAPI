@@ -1,11 +1,10 @@
 package tw.fondus.fews.openapi.transformation.util;
 
-import java.util.stream.IntStream;
-
+import nl.wldelft.util.timeseries.TimeSeriesArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import nl.wldelft.util.timeseries.TimeSeriesArray;
+import java.util.stream.IntStream;
 
 /**
  * The tools of the transformation.
@@ -20,38 +19,38 @@ public class TransformationUtils {
 	/**
 	 * Filter the noise.
 	 * 
-	 * @param input
-	 * @param output
-	 * @param noise
+	 * @param input input
+	 * @param output output
+	 * @param noise noise value
 	 */
 	public static void filterNoise( TimeSeriesArray input, TimeSeriesArray output, float noise ){
 		IntStream.range( 0, output.size() ).forEach( i -> {
-			Float now = input.getValue( i );
+			float now = input.getValue( i );
 			if ( Float.isNaN( now ) ){
 				now = 0.0f;
 			}
 			
 			if ( now >= noise ){
-				int periousIndex = i - 1;
+				int previousIndex = i - 1;
 				int nextIndex = i + 1;
 				
-				if ( periousIndex < 0 ){
-					periousIndex = 0;
+				if ( previousIndex < 0 ){
+					previousIndex = 0;
 				}
 				
 				if ( nextIndex > (output.size() - 1) ){
 					nextIndex = i;
 				}
+
+				float previous = input.getValue( previousIndex );
+				float next = input.getValue( nextIndex );
 				
-				Float perious = input.getValue( periousIndex );
-				Float next = input.getValue( nextIndex );
-				
-				if ( periousIndex == 0 && next < THRESHOLD_LOW ){
+				if ( previousIndex == 0 && next < THRESHOLD_LOW ){
 					now = next;
-				} else if ( nextIndex == i && perious < THRESHOLD_LOW ){
-					now = perious;
-				} else if ( (perious < THRESHOLD_LOW && next < THRESHOLD_LOW) || (now - perious) > THRESHOLD_LOW && (now - next) > THRESHOLD_LOW ){
-					now = ( perious + next ) / 2;
+				} else if ( nextIndex == i && previous < THRESHOLD_LOW ){
+					now = previous;
+				} else if ( (previous < THRESHOLD_LOW && next < THRESHOLD_LOW) || (now - previous) > THRESHOLD_LOW && (now - next) > THRESHOLD_LOW ){
+					now = ( previous + next ) / 2;
 					
 					log.info( "Input value: {} execeed Noise: {}, so programs fill value with Linear Interpolation.", now, noise );
 				} 
@@ -64,9 +63,9 @@ public class TransformationUtils {
 	/**
 	 * Filter the noise when it repeat.
 	 * 
-	 * @param input
-	 * @param output
-	 * @param noise
+	 * @param input input
+	 * @param output output
+	 * @param noise noise value
 	 */
 	public static void filterNoiseRepeat( TimeSeriesArray input, TimeSeriesArray output, float noise ){
 		int limit = output.size() - 1;
@@ -74,15 +73,15 @@ public class TransformationUtils {
 			Float now = input.getValue( i );
 			
 			if ( now >= noise ){
-				int periousIndex = i - 1;
+				int previousIndex = i - 1;
 				int nextIndex = i + 1;
-				
-				Float perious = input.getValue( periousIndex );
+
+				float previous = input.getValue( previousIndex );
 				Float next = input.getValue( nextIndex );
 				
-				if ( perious < THRESHOLD_LOW && now.equals( next ) ){
-					output.setValue( i, perious );
-					output.setValue( nextIndex, perious );
+				if ( previous < THRESHOLD_LOW && now.equals( next ) ){
+					output.setValue( i, previous );
+					output.setValue( nextIndex, previous );
 				}
 			}
 		} );

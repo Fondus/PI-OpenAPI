@@ -42,13 +42,12 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<string.version>0.4.0</string.version>
-		<jodatime.version>2.9.9</jodatime.version>
+		<lombok.version>1.18.4</lombok.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
 		<fews.version>2017.01</fews.version>
 		<xerces.version>2.11.0</xerces.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13</junit.version>
 		<commons.version>1.0.2</commons.version>
 		<commons.utils.version>0.8.5</commons.utils.version>
 	</properties>
@@ -59,13 +58,6 @@
 			<dependency>
 				<groupId>tw.fondus.commons</groupId>
 				<artifactId>commons-fews</artifactId>
-				<version>${commons.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<!-- Commons-Web -->
-			<dependency>
-				<groupId>tw.fondus.commons</groupId>
-				<artifactId>commons-web</artifactId>
 				<version>${commons.version}</version>
 				<scope>provided</scope>
 			</dependency>
@@ -80,17 +72,11 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Strman -->
+		<!-- Lombok -->
 		<dependency>
-			<groupId>com.shekhargulati</groupId>
-			<artifactId>strman</artifactId>
-			<version>${string.version}</version>
-		</dependency>
-		<!-- Joda-time -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${jodatime.version}</version>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
 		</dependency>
 		<!-- Log4J -->
 		<dependency>
@@ -232,5 +218,6 @@
 
 	<modules>
 		<module>PI-OpenAPI-Transformation</module>
+		<module>PI-OpenAPI-Export</module>
 	</modules>
 </project>
