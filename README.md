@@ -91,8 +91,3 @@ Now the code above will explained step by step to understand the details.
 
 The FondUS Java implements of the custome import modules.
 Not implements yet.
-
-## PI-OpenAPI Export Module
-
-The FondUS Java implements of the custome export modules.
-Not implements yet.
