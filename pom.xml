@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tw.fondus.fews.openapi</groupId>
 	<artifactId>pi-openapi</artifactId>
-	<version>{api.version}</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
 	<name>The FEWS Published Interface Open API</name>
@@ -27,37 +29,37 @@
 			<email>vipcube@gmail.com</email>
 		</developer>
 	</developers>
+	
+	<scm>
+		<url>https://github.com/Fondus/PI-OpenAPI</url>
+		<connection>scm:git:https://github.com/Fondus/PI-OpenAPI.git</connection>
+		<developerConnection>scm:git:https://github.com/Fondus/PI-OpenAPI.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
-		<api.version>0.1.0</api.version>
+		<api.version>1.0.0</api.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<string.version>0.4.0</string.version>
-		<jodatime.version>2.9.9</jodatime.version>
+		<lombok.version>1.18.4</lombok.version>
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.25</slf4j.version>
-		<guava.version>23.4-jre</guava.version>
 		<fews.version>2017.01</fews.version>
 		<xerces.version>2.11.0</xerces.version>
-		<junit.version>4.12</junit.version>
-		<commons.version>0.8.0</commons.version>
-		<commons.utils.version>0.7.2</commons.utils.version>
+		<junit.version>4.13</junit.version>
+		<commons.version>1.0.2</commons.version>
+		<commons.utils.version>0.8.5</commons.utils.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- Google Guava -->
-			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<version>${guava.version}</version>
-			</dependency>
 			<!-- Commons-FEWS -->
 			<dependency>
 				<groupId>tw.fondus.commons</groupId>
 				<artifactId>commons-fews</artifactId>
 				<version>${commons.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<!-- Commons-Utils -->
 			<dependency>
@@ -65,32 +67,16 @@
 				<artifactId>commons-utils</artifactId>
 				<version>${commons.utils.version}</version>
 				<scope>provided</scope>
-				<exclusions>
-					<exclusion>
-						<groupId>org.dom4j</groupId>
-						<artifactId>dom4j</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- Strman -->
+		<!-- Lombok -->
 		<dependency>
-			<groupId>com.shekhargulati</groupId>
-			<artifactId>strman</artifactId>
-			<version>${string.version}</version>
-		</dependency>
-		<!-- Joda-time -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${jodatime.version}</version>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
 		</dependency>
 		<!-- Log4J -->
 		<dependency>
@@ -121,37 +107,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- Delft-FEWS -->
+		<!-- Delft-FEWS Starter -->
 		<dependency>
 			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-openapi</artifactId>
+			<artifactId>delft-fews-starter-commons</artifactId>
 			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-pi</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-pi-castor</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>fews-util</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.wldelft.fews</groupId>
-			<artifactId>castor</artifactId>
-			<version>${fews.version}</version>
-		</dependency>
-		<!-- Xerces Impl -->
-		<dependency>
-			<groupId>xerces</groupId>
-			<artifactId>xercesImpl</artifactId>
-			<version>${xerces.version}</version>
 		</dependency>
 		<!-- Junit -->
 		<dependency>
@@ -185,7 +145,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.12.4</version>
+					<version>2.22.2</version>
 					<configuration>
 						<skipTests>true</skipTests>
 					</configuration>
@@ -196,12 +156,57 @@
 			<!-- Build with 1.8 -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.8.1</version>
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
+			</plugin>
+			<!-- Java Source -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Release -->
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+                	<autoVersionSubmodules>true</autoVersionSubmodules>
+            	</configuration>
+			</plugin>
+			<!-- JaCoCo Code Coverage -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.4</version>
+				<executions>
+					<execution>
+						<id>pre-test</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<configuration>
+							<outputDirectory>${basedir}/target/coverage-reports</outputDirectory>
+						</configuration>
+						<id>post-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -210,8 +215,9 @@
 		<system>GitHub Issues</system>
 		<url>https://github.com/Fondus/</url>
 	</issueManagement>
-	
+
 	<modules>
 		<module>PI-OpenAPI-Transformation</module>
+		<module>PI-OpenAPI-Export</module>
 	</modules>
 </project>
