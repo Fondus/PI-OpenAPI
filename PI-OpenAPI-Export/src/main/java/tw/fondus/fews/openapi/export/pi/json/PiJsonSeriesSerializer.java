@@ -5,16 +5,16 @@ import nl.wldelft.util.Properties;
 import nl.wldelft.util.PropertiesConsumer;
 import nl.wldelft.util.io.LineWriter;
 import nl.wldelft.util.io.TextSerializer;
-import nl.wldelft.util.timeseries.DefaultTimeSeriesHeader;
 import nl.wldelft.util.timeseries.SimpleTimeSeriesContentHandler;
 import nl.wldelft.util.timeseries.TimeSeriesArrays;
 import nl.wldelft.util.timeseries.TimeSeriesContent;
 import nl.wldelft.util.timeseries.TimeSeriesHeader;
-import tw.fondus.commons.fews.pi.util.json.PiJSONBuilder;
 import tw.fondus.commons.fews.pi.util.timeseries.TimeSeriesUtils;
+import tw.fondus.commons.json.util.gson.GsonMapperRuntime;
+import tw.fondus.commons.rest.pi.json.model.timeseries.PiTimeSeriesCollection;
+import tw.fondus.commons.rest.pi.json.util.timeseries.PiSeriesMapper;
+import tw.fondus.commons.util.math.NumberUtils;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
@@ -24,6 +24,7 @@ import java.util.stream.IntStream;
  *
  */
 @Slf4j
+@SuppressWarnings( "rawtypes" )
 public class PiJsonSeriesSerializer implements TextSerializer<TimeSeriesContent>, PropertiesConsumer {
 	private int timeZero;
 
@@ -34,13 +35,13 @@ public class PiJsonSeriesSerializer implements TextSerializer<TimeSeriesContent>
 			log.error( "PiJsonSeriesSerializer: No TimeSeries can be Written." );
 		}
 
-		SimpleTimeSeriesContentHandler handler = new SimpleTimeSeriesContentHandler();
+		SimpleTimeSeriesContentHandler handler = TimeSeriesUtils.seriesHandler();
 		IntStream.range( 0, timeSeriesContent.getTimeSeriesCount() ).forEach( i -> {
 			timeSeriesContent.setTimeSeriesIndex( i );
 
 			// Header
 			TimeSeriesHeader header = timeSeriesContent.getTimeSeriesHeader();
-			handler.setNewTimeSeriesHeader(mappingHeader( header ) );
+			TimeSeriesUtils.addHeader( handler, header );
 
 			// Time Value
 			IntStream.range( 0, timeSeriesContent.getContentTimeCount() )
@@ -49,43 +50,19 @@ public class PiJsonSeriesSerializer implements TextSerializer<TimeSeriesContent>
 
 				if ( timeSeriesContent.isTimeAvailable() ){
 					long time = timeSeriesContent.getTime();
-					float value = timeSeriesContent.getValue();
-
-					TimeSeriesUtils.addPiTimeSeriesValue( handler, time, value );
+					TimeSeriesUtils.addValue( handler, time, NumberUtils.create( timeSeriesContent.getValue() ) );
 				}
 			} );
 		} );
 
 		TimeSeriesArrays timeSeriesArrays = handler.getTimeSeriesArrays();
-		lineWriter.writeLine( PiJSONBuilder.toTimeSeriesJSON( timeSeriesArrays, this.timeZero ).toString() );
+		PiTimeSeriesCollection collection = PiSeriesMapper.toPiTimeSeriesCollection( timeSeriesArrays, this.timeZero );
+		lineWriter.writeLine( GsonMapperRuntime.ISO8601.toString( collection ) );
 	}
 
 	@Override
 	public void setProperties( Properties properties ) {
 		this.timeZero = properties.getInt( "TimeZeroIndex", 0 );
 		log.debug( "PiJsonSeriesSerializer: The time zero index is {}.", this.timeZero );
-	}
-
-	/**
-	 * Mapping header to avoid the ensemble.
-	 *
-	 * @param header header
-	 * @return header
-	 */
-	private TimeSeriesHeader mappingHeader( TimeSeriesHeader header ){
-		DefaultTimeSeriesHeader headerHandler = new DefaultTimeSeriesHeader();
-		headerHandler.setParameterId( header.getParameterId() );
-		headerHandler.setUnit( header.getUnit() );
-		headerHandler.setLocationId( header.getLocationId() );
-		headerHandler.setTimeStep( header.getTimeStep() );
-		headerHandler.setParameterType( header.getParameterType() );
-		if ( header.getQualifierCount() > 0 ){
-			List<String> qualifiers = IntStream.range( 0, header.getQualifierCount() )
-					.mapToObj( i -> header.getQualifierId( i ) )
-					.collect( Collectors.toList() );
-
-			headerHandler.setQualifierIds( qualifiers.toArray( new String[header.getQualifierCount()] ) );
-		}
-		return headerHandler;
 	}
 }

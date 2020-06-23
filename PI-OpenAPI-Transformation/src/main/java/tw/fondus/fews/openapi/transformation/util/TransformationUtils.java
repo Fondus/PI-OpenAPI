@@ -1,8 +1,7 @@
 package tw.fondus.fews.openapi.transformation.util;
 
+import lombok.extern.slf4j.Slf4j;
 import nl.wldelft.util.timeseries.TimeSeriesArray;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.stream.IntStream;
 
@@ -12,9 +11,12 @@ import java.util.stream.IntStream;
  * @author Brad Chen
  *
  */
+@Slf4j
+@SuppressWarnings( "rawtypes" )
 public class TransformationUtils {
-	private static final Logger log = LoggerFactory.getLogger( TransformationUtils.class );
 	public static final int THRESHOLD_LOW = 30;
+
+	private TransformationUtils(){}
 	
 	/**
 	 * Filter the noise.
@@ -52,11 +54,11 @@ public class TransformationUtils {
 				} else if ( (previous < THRESHOLD_LOW && next < THRESHOLD_LOW) || (now - previous) > THRESHOLD_LOW && (now - next) > THRESHOLD_LOW ){
 					now = ( previous + next ) / 2;
 					
-					log.info( "Input value: {} execeed Noise: {}, so programs fill value with Linear Interpolation.", now, noise );
+					log.info( "Input value: {} exceed Noise: {}, so programs fill value with Linear Interpolation.", now, noise );
 				} 
 			}
 			
-			output.setValue( i, now);
+			output.setValue( i, now );
 		});
 	}
 	
