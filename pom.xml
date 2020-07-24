@@ -47,7 +47,7 @@
 		<log4j.version>2.13.2</log4j.version>
 		<fews.version>2018.02-hotfix1</fews.version>
 		<junit.version>4.13</junit.version>
-		<fondus.sdk.version>2.3.2</fondus.sdk.version>
+		<fondus.sdk.version>2.3.3</fondus.sdk.version>
 	</properties>
 
 	<dependencyManagement>
