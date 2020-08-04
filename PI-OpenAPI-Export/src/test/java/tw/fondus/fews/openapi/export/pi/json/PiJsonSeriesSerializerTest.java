@@ -8,7 +8,6 @@ import org.junit.Test;
 import tw.fondus.commons.fews.pi.util.timeseries.TimeSeriesUtils;
 import tw.fondus.commons.json.util.JSONUtils;
 
-import javax.naming.OperationNotSupportedException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,6 +20,7 @@ import java.nio.file.Paths;
  * @author Brad Chen
  *
  */
+@SuppressWarnings( "rawtypes" )
 public class PiJsonSeriesSerializerTest {
 	private Path path;
 
@@ -31,13 +31,13 @@ public class PiJsonSeriesSerializerTest {
 	}
 
 	@Test
-	public void test() throws IOException, OperationNotSupportedException {
-		TimeSeriesArrays timeSeriesArrays = TimeSeriesUtils.readPiTimeSeries( this.path );
+	public void test() throws IOException {
+		TimeSeriesArrays timeSeriesArrays = TimeSeriesUtils.read( this.path );
 		File outputFile = Paths.get( "src/test/resources/Output.json" ).toFile();
 
 		timeSeriesArrays.write( outputFile, new PiJsonSeriesSerializer() );
 
 		Assert.assertTrue( Files.exists( outputFile.toPath() ) );
-		Assert.assertTrue( JSONUtils.isJSONValid( FileUtils.readText( outputFile ) ) );
+		Assert.assertTrue( JSONUtils.isJSON( FileUtils.readText( outputFile ) ) );
 	}
 }
