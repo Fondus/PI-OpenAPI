@@ -7,6 +7,14 @@ It's possible to write custom plugins above a below.
 - Export module.
 - Transformations module.
 
+## PI-OpenAPI Import Module
+
+The FondUS Java implements of the custom imports modules.
+
+It's support the import type is show as below:
+
+- ManySplendid Company PcRaster WGS1984 Text Grid
+
 ## PI-OpenAPI Export Module
 
 The FondUS Java implements of the custom exports modules.

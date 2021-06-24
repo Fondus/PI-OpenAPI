@@ -2,9 +2,9 @@ package tw.fondus.fews.openapi.export.pi.json;
 
 import nl.wldelft.util.FileUtils;
 import nl.wldelft.util.timeseries.TimeSeriesArrays;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import tw.fondus.commons.fews.pi.util.timeseries.TimeSeriesUtils;
 import tw.fondus.commons.json.util.JSONUtils;
 
@@ -24,10 +24,10 @@ import java.nio.file.Paths;
 public class PiJsonSeriesSerializerTest {
 	private Path path;
 
-	@Before
+	@BeforeEach
 	public void setUp(){
 		this.path = Paths.get( "src/test/resources/Input.xml" );
-		Assert.assertTrue( Files.exists( this.path ) );
+		Assertions.assertTrue( Files.exists( this.path ) );
 	}
 
 	@Test
@@ -37,7 +37,7 @@ public class PiJsonSeriesSerializerTest {
 
 		timeSeriesArrays.write( outputFile, new PiJsonSeriesSerializer() );
 
-		Assert.assertTrue( Files.exists( outputFile.toPath() ) );
-		Assert.assertTrue( JSONUtils.isJSON( FileUtils.readText( outputFile ) ) );
+		Assertions.assertTrue( Files.exists( outputFile.toPath() ) );
+		Assertions.assertTrue( JSONUtils.isJSON( FileUtils.readText( outputFile ) ) );
 	}
 }
