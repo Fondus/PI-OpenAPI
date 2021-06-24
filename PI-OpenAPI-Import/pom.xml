@@ -2,34 +2,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>pi-openapi</artifactId>
 		<groupId>tw.fondus.fews.openapi</groupId>
 		<version>2.1.0</version>
 	</parent>
+	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>pi-openapi-export</artifactId>
+	<artifactId>pi-openapi-import</artifactId>
 	<packaging>jar</packaging>
 
-	<name>The FEWS Published Interface Open API Export Plugins</name>
+	<name>The FEWS Published Interface Open API Import Plugins</name>
 	<url>https://publicwiki.deltares.nl/display/FEWSDOC/Custom+time+series+import+formats+using+java</url>
 
 	<description>
-		The FondUS Java implements of the custom exports modules.
+		The FondUS Java implements of the custom import modules.
 	</description>
 
 	<dependencies>
 		<!-- FondUS SDK: The open source project can't use this -->
 		<dependency>
 			<groupId>tw.fondus.commons</groupId>
-			<artifactId>commons-rest-pijson</artifactId>
+			<artifactId>commons-core</artifactId>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<!-- Copy dependencies to target folder -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
