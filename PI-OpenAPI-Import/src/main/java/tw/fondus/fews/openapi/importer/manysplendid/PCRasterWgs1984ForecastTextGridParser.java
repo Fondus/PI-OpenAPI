@@ -1,5 +1,7 @@
 package tw.fondus.fews.openapi.importer.manysplendid;
 
+import lombok.Builder;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import nl.wldelft.util.Properties;
 import nl.wldelft.util.PropertiesConsumer;
@@ -11,14 +13,11 @@ import nl.wldelft.util.timeseries.DefaultTimeSeriesHeader;
 import nl.wldelft.util.timeseries.TimeSeriesContentHandler;
 import org.joda.time.DateTime;
 import strman.Strman;
-import tw.fondus.commons.util.collection.IteratorUtils;
 import tw.fondus.commons.util.string.StringFormatter;
 import tw.fondus.commons.util.string.Strings;
 import tw.fondus.commons.util.time.JodaTimeUtils;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -56,21 +55,21 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 			this.parseHeaderParameter( header, lines );
 
 			// Parse Grid
-			Map<Wgs1984Point, Float> data = this.parseGridGeometryData( lines );
+			List<GeometryPoint> data = this.parseGridGeometryData( lines );
 			if ( data.isEmpty() ){
 				log.warn( "PCRasterTextGridParser: File grid content is empty." );
 			} else {
 				log.info( "PCRasterTextGridParser: Success to parse grid data with {} points, try to mapping with FEWS data model.", data.size() );
 
-				Collection<Float> values = data.values();
-				float[] gridValues = new float[values.size()];
-				IteratorUtils.forEachIndexed( values, (i, value) -> gridValues[i] = value );
-
-				Wgs1984Point[] points = data.keySet().toArray( new Wgs1984Point[0] );
-				PointsGeometry geometry = new PointsGeometry( points );
+				Wgs1984Point[] points = new Wgs1984Point[data.size()];
+				float[] gridValues = new float[data.size()];
+				for ( int i = 0; i < data.size(); i++ ){
+					points[i] = data.get( i ).geometry;
+					gridValues[i] = data.get( i ).value;
+				}
 
 				handler.setTimeSeriesHeader( header );
-				handler.setGeometry( geometry );
+				handler.setGeometry( new PointsGeometry( points ) );
 				handler.setCoverageValues( gridValues );
 				handler.applyCurrentFields();
 			}
@@ -83,14 +82,15 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 	 * @param lines file lines
 	 * @return grid data
 	 */
-	private Map<Wgs1984Point, Float> parseGridGeometryData( List<String> lines ){
+	private List<GeometryPoint> parseGridGeometryData( List<String> lines ){
 		return lines.stream()
 				.skip( 5 )
 				.map( line -> line.split( Strings.SPLIT_SPACE_MULTIPLE ) )
-				.collect( Collectors.toMap(
-						temps -> new Wgs1984Point( Double.parseDouble( temps[1] ), Double.parseDouble( temps[0] ) ),
-						temps -> Float.parseFloat( temps[2] )
-				) );
+				.map( temps -> GeometryPoint.builder()
+						.geometry( new Wgs1984Point( Double.parseDouble( temps[1] ), Double.parseDouble( temps[0] ) ) )
+						.value( Float.parseFloat( temps[2] ) )
+						.build() )
+				.collect( Collectors.toList() );
 	}
 
 	/**
@@ -134,5 +134,12 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 			log.error( "PCRasterTextGridParser: File forecast name not equals {}.", this.forecastName );
 			throw new IllegalStateException( StringFormatter.format( "PCRasterTextGridParser: File forecast name not equals {}.", this.forecastName ) );
 		}
+	}
+
+	@Data
+	@Builder
+	private static class GeometryPoint {
+		private Wgs1984Point geometry;
+		private float value;
 	}
 }
