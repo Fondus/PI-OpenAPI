@@ -13,6 +13,6 @@
             <missVal>NaN</missVal>
             <units>mm/hr</units>
         </header>
-        <event date="2021-06-21" time="05:00:00" value="1.0483545" flag="0" comment="0.0..63.5 20666"/>
+        <event date="2021-06-21" time="05:00:00" value="1.0483499" flag="0" comment="0.0..63.5 20666"/>
     </series>
 </TimeSeries>
