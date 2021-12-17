@@ -1,6 +1,5 @@
 package tw.fondus.fews.openapi.export.pi.json;
 
-import lombok.extern.slf4j.Slf4j;
 import nl.wldelft.util.Properties;
 import nl.wldelft.util.PropertiesConsumer;
 import nl.wldelft.util.io.LineWriter;
@@ -23,7 +22,7 @@ import java.util.stream.IntStream;
  * @author Brad Chen
  *
  */
-@Slf4j
+//@Slf4j
 @SuppressWarnings( "rawtypes" )
 public class PiJsonSeriesSerializer implements TextSerializer<TimeSeriesContent>, PropertiesConsumer {
 	private int timeZero;
@@ -32,7 +31,7 @@ public class PiJsonSeriesSerializer implements TextSerializer<TimeSeriesContent>
 	public void serialize( TimeSeriesContent timeSeriesContent, LineWriter lineWriter, String s )
 			throws Exception {
 		if ( timeSeriesContent.getTimeSeriesCount() <= 0 ) {
-			log.error( "PiJsonSeriesSerializer: No TimeSeries can be Written." );
+			//log.error( "PiJsonSeriesSerializer: No TimeSeries can be Written." );
 		}
 
 		SimpleTimeSeriesContentHandler handler = TimeSeriesUtils.seriesHandler();
@@ -63,6 +62,6 @@ public class PiJsonSeriesSerializer implements TextSerializer<TimeSeriesContent>
 	@Override
 	public void setProperties( Properties properties ) {
 		this.timeZero = properties.getInt( "TimeZeroIndex", 0 );
-		log.debug( "PiJsonSeriesSerializer: The time zero index is {}.", this.timeZero );
+		//log.debug( "PiJsonSeriesSerializer: The time zero index is {}.", this.timeZero );
 	}
 }

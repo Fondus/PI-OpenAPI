@@ -2,7 +2,6 @@ package tw.fondus.fews.openapi.importer.manysplendid;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 import nl.wldelft.util.Properties;
 import nl.wldelft.util.PropertiesConsumer;
 import nl.wldelft.util.coverage.PointsGeometry;
@@ -26,7 +25,7 @@ import java.util.stream.Collectors;
  * @author Brad Chen
  *
  */
-@Slf4j
+//@Slf4j
 public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSeriesContentHandler>, PropertiesConsumer {
 	private String forecastName;
 	private String timeFormat;
@@ -41,7 +40,7 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 	public void parse( LineReader reader, String virtualFileName, TimeSeriesContentHandler handler )
 			throws Exception {
 		reader.setSkipEmptyLines(true);
-		log.info( "PCRasterTextGridParser: Try to parse grid data with file: {}.", virtualFileName );
+		//log.info( "PCRasterTextGridParser: Try to parse grid data with file: {}.", virtualFileName );
 		List<String> lines = reader.lines().collect( Collectors.toList() );
 		if ( lines.size() == 0 ) {
 			throw new IllegalStateException( "PCRasterTextGridParser: File content is empty." );
@@ -57,9 +56,9 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 			// Parse Grid
 			List<GeometryPoint> data = this.parseGridGeometryData( lines );
 			if ( data.isEmpty() ){
-				log.warn( "PCRasterTextGridParser: File grid content is empty." );
+				//log.warn( "PCRasterTextGridParser: File grid content is empty." );
 			} else {
-				log.info( "PCRasterTextGridParser: Success to parse grid data with {} points, try to mapping with FEWS data model.", data.size() );
+				//log.info( "PCRasterTextGridParser: Success to parse grid data with {} points, try to mapping with FEWS data model.", data.size() );
 
 				Wgs1984Point[] points = new Wgs1984Point[data.size()];
 				float[] gridValues = new float[data.size()];
@@ -105,7 +104,7 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 		String unit = Strman.between( line, "(", "\\)" )[0];
 		header.setParameterId( parameter );
 		header.setUnit( unit );
-		log.info( "PCRasterTextGridParser: Header Information Parameter Id: {}, Unit: {}.", parameter, unit );
+		//log.info( "PCRasterTextGridParser: Header Information Parameter Id: {}, Unit: {}.", parameter, unit );
 	}
 
 	/**
@@ -126,12 +125,12 @@ public class PCRasterWgs1984ForecastTextGridParser implements TextParser<TimeSer
 			DateTime currentTime = JodaTimeUtils.toDateTime( times[1], this.timeFormat, JodaTimeUtils.UTC8 );
 			DateTime forecastTime = JodaTimeUtils.toDateTime( times[0], this.timeFormat, JodaTimeUtils.UTC8 );
 
-			log.info( "PCRasterTextGridParser: Header Information Forecast Time: {}, Current Time: {}.", forecastTime, currentTime );
+			//log.info( "PCRasterTextGridParser: Header Information Forecast Time: {}, Current Time: {}.", forecastTime, currentTime );
 
 			handler.setTime( currentTime.getMillis() );
 			header.setForecastTime( forecastTime.getMillis() );
 		} else {
-			log.error( "PCRasterTextGridParser: File forecast name not equals {}.", this.forecastName );
+			//log.error( "PCRasterTextGridParser: File forecast name not equals {}.", this.forecastName );
 			throw new IllegalStateException( StringFormatter.format( "PCRasterTextGridParser: File forecast name not equals {}.", this.forecastName ) );
 		}
 	}
