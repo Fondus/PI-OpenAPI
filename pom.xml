@@ -43,7 +43,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<lombok.version>1.18.22</lombok.version>
 		<slf4j.version>1.7.32</slf4j.version>
-		<log4j.version>2.16.0</log4j.version>
+		<log4j.version>2.17.0</log4j.version>
 		<fews.version>2018.02-hotfix2</fews.version>
 		<junit5.version>5.8.2</junit5.version>
 		<fondus.sdk.version>2.4.7</fondus.sdk.version>
